@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+HK&display=swap");
+
+$bebas: "Bebas Neue", cursive;
+$noto: "Noto Sans HK", sans-serif;
+htm {
+  font-size: 62.5%;
+}
+body {
+  font-family: $noto;
+  font-size: 1.4rem;
+  color: #231f20;
+}
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: $bebas;
+}
+.container-fluid {
+  max-width: 1440px;
+}
+
+hr {
+  border-top: 3px solid #000;
+  width: 20%;
+}
+
+.row {
+  margin-bottom: 4.5rem;
+}
+.bottom-gfm {
+  .gofund-bttn-wrap {
+    justify-content: center;
+  }
+}
+.footer {
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  opacity: 0.5;
+  .iamsmarts {
+    text-align: right;
+    a {
+      color: #231f20;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    .col {
+      width: 100%;
+      flex-basis: unset;
+      text-align: center;
+    }
+  }
+}

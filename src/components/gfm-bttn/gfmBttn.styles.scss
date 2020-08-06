@@ -1,0 +1,17 @@
+.gofund-bttn-wrap {
+  display: flex;
+  // justify-content: flex-end;
+  align-items: center;
+  .gofund-bttn {
+    background: linear-gradient(180deg, #fdb933 35.42%, #f58131 139.58%);
+    border-color: #c06828;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    min-width: 120px;
+    text-align: center;
+    padding: 5px;
+    color: #231f20;
+    border-radius: 0.25rem;
+    border: 1px solid #000;
+  }
+}
