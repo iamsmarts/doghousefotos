@@ -3,7 +3,7 @@ import { createContext } from "react";
 const Context = createContext({
   isHome: true,
   isLightBox: false,
-  whichPhotog: "jorge",
+  whichPhotog: null,
   activeImg: null,
 });
 export default Context;
