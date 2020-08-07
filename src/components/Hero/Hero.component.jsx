@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import Context from "../../Context";
 import "./Hero.styles.scss";
+
 const Hero = () => {
+  const { state, dispatch } = useContext(Context);
+  const handlePhotoAssign = (photog) => {
+    console.log(photog);
+    dispatch({ type: "WHICH_PHOTOG", payload: photog });
+  };
   return (
     <div className=" row dhf-hero">
-      <div className="col photogs-block pb-jorge">
+      <div
+        className="col photogs-block pb-jorge"
+        onClick={() => {
+          handlePhotoAssign("jorge");
+        }}
+      >
         <h2>Jorge</h2>
         <div className="pb-bkg"></div>
       </div>
-      <div className="col photogs-block pb-ed">
+      <div
+        className="col photogs-block pb-ed"
+        onClick={() => {
+          handlePhotoAssign("ed");
+        }}
+      >
         <h2>Ed</h2>
         <div className="pb-bkg"></div>
       </div>
-      <div className="col photogs-block pb-kei">
-        <h2>Kei</h2>
+      <div
+        className="col photogs-block pb-kie"
+        onClick={() => {
+          handlePhotoAssign("kie");
+        }}
+      >
+        <h2>Kie</h2>
         <div className="pb-bkg"></div>
       </div>
     </div>

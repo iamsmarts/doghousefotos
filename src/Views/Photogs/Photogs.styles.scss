@@ -1,0 +1,30 @@
+.photogs-wrap {
+  .navigation {
+    list-style-type: none;
+    font-size: 1.8rem;
+    // width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pdata-wrap {
+    width: 100%;
+    margin: 0 15px;
+    display: flex;
+    .ig-icon {
+      width: 30px;
+    }
+  }
+  .gallery-wrap {
+    width: 80%;
+    margin: 0 auto;
+    .gallery-img {
+      margin-bottom: 10px;
+      max-height: 330px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
