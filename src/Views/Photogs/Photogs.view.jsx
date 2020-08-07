@@ -9,7 +9,9 @@ const Photogs = ({ name }) => {
   let pSet = Photographers.map((p, i) => {
     // console.log(p);
     if (p.name === state.whichPhotog) {
-      pData = p;
+      return (pData = p);
+    } else {
+      return null;
     }
   });
   console.log(pSet);
