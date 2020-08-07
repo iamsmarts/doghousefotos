@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Context from "../../Context";
 import Photographers from "../../photogs";
 import "./Photogs.styles.scss";
@@ -6,18 +6,21 @@ import "./Photogs.styles.scss";
 const Photogs = ({ name }) => {
   const { state, dispatch } = useContext(Context);
   let pData;
-  const pSet = Photographers.map((p, i) => {
+  let pSet = Photographers.map((p, i) => {
     // console.log(p);
     if (p.name === state.whichPhotog) {
       pData = p;
     }
   });
-  console.log(pData);
-  let galItems = pData.photos.map((photo) => {
+  console.log(pSet);
+  let galItems = pData.photos.map((photo, i) => {
     return (
       <div
         className="col-md-4 gallery-img"
-        onClick={() => HandleImgClick(`./images/${pData.name}/${photo}`)}
+        key={i}
+        onClick={() => {
+          HandleImgClick(`./images/${pData.name}/${photo}`);
+        }}
       >
         <img src={`./images/${pData.name}/${photo}`} alt="" />
       </div>
@@ -38,7 +41,7 @@ const Photogs = ({ name }) => {
         <div
           className="col"
           onClick={() => {
-            HandleNavClick(null);
+            return HandleNavClick(null);
           }}
         >
           Home

@@ -1,11 +1,11 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Context from "../../Context";
 import "./Hero.styles.scss";
 
 const Hero = () => {
   const { state, dispatch } = useContext(Context);
   const handlePhotoAssign = (photog) => {
-    console.log(photog);
+    console.log(state);
     dispatch({ type: "WHICH_PHOTOG", payload: photog });
   };
   return (
