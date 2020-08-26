@@ -85,7 +85,16 @@ hr {
     }
   }
 }
-
+.ig-wrap {
+  margin-bottom: 10px;
+  .ig-home {
+    text-align: center;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
 @media (max-width: 500px) {
   .footer {
     display: flex;
